@@ -1,25 +1,18 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    // Animate section header
+    // Simple fade-in animations on mount
     gsap.from('.experience-header', {
       y: 50,
       opacity: 0,
       duration: 1,
       ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.experience-header',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.2
     })
 
     // Animate experience items
@@ -29,11 +22,7 @@ const Experience = () => {
       duration: 0.8,
       ease: 'power3.out',
       stagger: 0.2,
-      scrollTrigger: {
-        trigger: '.experience-content',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.5
     })
   }, { scope: containerRef })
 
@@ -43,7 +32,7 @@ const Experience = () => {
       issuer: "Microsoft",
       issuedDate: "May 2025",
       credentialId: "17F9543DC8AB3B1B",
-      skills: ["Azure AI", "Azure AI Foundry"],
+      skills: ["Azure AI", "Azure AI Foundry", "Machine Learning", "Cognitive Services", "Natural Language Processing", "Computer Vision", "AI Ethics", "Cloud Computing", "Azure Portal", "AI Model Training"],
       badgeId: "AI-900",
       badgeImage: "/images/microsoft.svg"
     },
@@ -52,7 +41,7 @@ const Experience = () => {
       issuer: "Forage",
       issuedDate: "Apr 2025",
       description: "Completed a job simulation building a hypothetical new VPN product for Verizon's Cloud Computing platform.",
-      skills: ["Agile Environment", "Research Skills"],
+      skills: ["Agile Environment", "Research Skills", "Cloud Computing", "VPN Architecture", "Network Security", "Product Development", "Technical Documentation", "System Design", "Team Collaboration", "Problem Solving"],
       badgeImage: "/images/Verizon.png"
     }
   ]

@@ -14,17 +14,8 @@ export default defineConfig({
         }
       }
     },
-    // Optimize build size
-    minify: 'terser',
-    cssMinify: true,
     // Enable source maps for better debugging
     sourcemap: false
-  },
-  // Optimize dev server
-  server: {
-    hmr: {
-      overlay: false
-    }
   },
   // Preload optimizations
   optimizeDeps: {

@@ -19,6 +19,25 @@ const Navbar = () => {
     setIsMobileMenuOpen(false)
   }
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    const heroElement = document.getElementById('hero')
+    if (heroElement) {
+      heroElement.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // Fallback to top scroll if hero element not found
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -26,16 +45,22 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold z-50 relative">
+          <button 
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToTop()
+            }} 
+            className="text-2xl font-bold z-50 relative bg-transparent border-none text-white cursor-pointer hover:text-white/80 transition-colors"
+          >
             AG
-          </a>
+          </button>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#experience" className="nav-link">Experience</a>
-            <a href="#skills" className="nav-link">Skills</a>
-            <a href="#projects" className="nav-link">Projects</a>
+            <button onClick={() => scrollToSection('about')} className="nav-link bg-transparent border-none cursor-pointer">About</button>
+            <button onClick={() => scrollToSection('experience')} className="nav-link bg-transparent border-none cursor-pointer">Experience</button>
+            <button onClick={() => scrollToSection('skills')} className="nav-link bg-transparent border-none cursor-pointer">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="nav-link bg-transparent border-none cursor-pointer">Projects</button>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -84,34 +109,42 @@ const Navbar = () => {
           <div className="flex flex-col h-full pt-24 pb-8 px-8">
             {/* Navigation Links */}
             <div className="flex flex-col space-y-6 mb-8">
-              <a 
-                href="#about" 
-                onClick={handleLinkClick}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200"
+              <button 
+                onClick={() => {
+                  scrollToSection('about')
+                  handleLinkClick()
+                }}
+                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
               >
                 About
-              </a>
-              <a 
-                href="#experience" 
-                onClick={handleLinkClick}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200"
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('experience')
+                  handleLinkClick()
+                }}
+                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
               >
                 Experience
-              </a>
-              <a 
-                href="#skills" 
-                onClick={handleLinkClick}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200"
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('skills')
+                  handleLinkClick()
+                }}
+                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
               >
                 Skills
-              </a>
-              <a 
-                href="#projects" 
-                onClick={handleLinkClick}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200"
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('projects')
+                  handleLinkClick()
+                }}
+                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
               >
                 Projects
-              </a>
+              </button>
             </div>
 
             {/* Social Links */}

@@ -24,11 +24,6 @@ function App() {
     // Set up any global animations here with reduced motion support
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       gsap.to('body', { opacity: 1, duration: 0.5 })
-      
-      // Ensure gradient animation starts
-      gsap.set('.gradient-bg', { 
-        backgroundPosition: '0% 50%'
-      })
     }
   })
 

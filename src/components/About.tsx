@@ -1,25 +1,18 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    // Animate elements when they come into view
+    // Simple fade-in animations on mount
     gsap.from('.about-content', {
       y: 50,
       opacity: 0,
       duration: 1,
       ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.about-content',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.2
     })
 
     gsap.from('.about-text', {
@@ -28,11 +21,7 @@ const About = () => {
       duration: 0.8,
       ease: 'power3.out',
       stagger: 0.2,
-      scrollTrigger: {
-        trigger: '.about-text',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.5
     })
   }, { scope: containerRef })
 
@@ -52,7 +41,7 @@ const About = () => {
               {/* Main Bio */}
               <div className="about-text">
                 <p className="text-lg text-white/80 leading-relaxed">
-                  I'm currently a student at <span className="text-white font-medium">Indiana University Bloomington</span> studying Computer Science, with a strong interest in front-end development, full-stack development, and product design. I'm passionate about building meaningful, user-centered products using modern technologies and industry-standard practices.
+                  I'm currently a student at <span className="text-white font-medium">Indiana University Bloomington</span> studying Computer Science, with a strong interest in front-end engineering, full-stack development, and product design. I'm passionate about building meaningful, user-centered products using modern technologies and industry-standard practices.
                 </p>
               </div>
 
@@ -64,7 +53,7 @@ const About = () => {
 
               <div className="about-text">
                 <p className="text-lg text-white/80 leading-relaxed">
-                  I've gained hands on experience with <span className="text-red-400">JavaScript</span>, <span className="text-red-400">TypeScript</span>, <span className="text-red-400">Python</span>, <span className="text-red-400">C++</span>, <span className="text-red-400">HTML/CSS</span>, <span className="text-red-400">Django</span>, and am learning <span className="text-red-400">Java</span>. I am focused on emphasizing modern frameworks like <span className="text-red-400">React</span>, <span className="text-red-400">Next.js</span>, and <span className="text-red-400">generative AI integration</span>. I'm actively developing projects that incorporate AI, clean design, and intuitive UX, and I deeply value environments that foster quality, creativity, learning, and strong engineering culture.
+                  I've gained hands on experience with <span className="text-red-400">JavaScript</span>, <span className="text-red-400">TypeScript</span>, <span className="text-red-400">Python</span>, <span className="text-red-400">C++</span>, and am learning <span className="text-red-400">Java</span>. I am focused on emphasizing modern frameworks like <span className="text-red-400">React</span>, <span className="text-red-400">Next.js</span>, and generative AI integration. I'm actively developing projects that incorporate AI, clean design, and intuitive UX, and I deeply value environments that foster quality, creativity, learning, and strong engineering culture.
                 </p>
               </div>
 
@@ -74,11 +63,16 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Personal Interests */}
               <div className="about-text">
-                <h3 className="text-xl font-semibold text-white mb-4">When I'm Not Coding</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Beyond Coding</h3>
+                <p className="text-lg text-white/80 leading-relaxed mb-4">
+                  When I'm not coding, I'm running outside, cycling, or in the gym chasing a pump. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows.
+                </p>
+                <p className="text-lg text-white/80 leading-relaxed mb-4">
+                  I'm really passionate about fitness and touching grass. I think it should be mandatory to exercise and do other things when you're on a computer for most of the day. I also love meeting new people and trying new food to experience different cultures.
+                </p>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  You can find me <span className="text-white">running</span> around campus, <span className="text-white">hitting the gym</span> for strength and functionality or <span className="text-white">cycling</span> through scenic routes. I'm always discovering new <span className="text-white">music</span> across different genres and love watching a good <span className="text-white">movie</span> or <span className="text-white">TV series</span>. I also enjoy <span className="text-white">touching grass</span>, <span className="text-white">reading</span> tech blogs and books, and <span className="text-white">exploring</span> local thrift shops and restaurants.
+                  I'm also someone who values continuous learning beyond just programming. I enjoy reading about entrepreneurship, psychology, and design thinking, and I'm always curious about how different industries solve complex problems. This broader perspective helps me approach software development with empathy and creativity.
                 </p>
               </div>
             </div>

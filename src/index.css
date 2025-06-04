@@ -19,7 +19,7 @@
 
 @layer components {
   .section {
-    @apply min-h-screen w-full snap-start py-20;
+    @apply min-h-screen w-full py-20;
   }
 
   .container {
@@ -27,13 +27,11 @@
   }
 
   .gradient-bg {
-    @apply animate-gradient-x;
-    background: linear-gradient(-45deg, #000000, #0A0A0A, rgba(255, 0, 0, 0.08), #0A0A0A, #000000);
-    background-size: 400% 400%;
+    background: linear-gradient(to right, #000000, #0A0A0A, rgba(255, 0, 0, 0.05), #0A0A0A, #000000);
+    background-size: 200% auto;
+    animation: gradient-shift 15s ease infinite;
     /* Ensure animation starts immediately */
     will-change: background-position;
-    animation-fill-mode: both;
-    animation-play-state: running;
   }
 
   .nav-link {
@@ -49,7 +47,7 @@
 }
 
 /* Enhanced gradient animation with better performance */
-@keyframes gradient-x {
+@keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -59,5 +57,5 @@
 }
 
 #root {
-  @apply h-screen snap-y snap-mandatory overflow-y-auto overflow-x-hidden;
+  @apply h-screen overflow-y-auto overflow-x-hidden;
 }

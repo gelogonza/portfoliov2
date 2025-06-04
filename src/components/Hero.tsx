@@ -35,8 +35,8 @@ const Hero = () => {
   }, { scope: containerRef })
 
   return (
-    <section ref={containerRef} className="section flex items-center justify-center">
-      <div className="container text-center">
+    <section id="hero" ref={containerRef} className="min-h-screen w-full flex items-center justify-center">
+      <div className="container text-center px-4">
         {/* Profile Image */}
         <div className="flex justify-center mb-8">
           <div className="hero-image relative">
@@ -64,7 +64,7 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="space-y-6">
-          <h1 className="hero-text text-5xl md:text-7xl lg:text-8xl font-bold">
+          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold">
             Angelo Gonzalez
           </h1>
           <p className="hero-text text-xl md:text-2xl text-white/70">

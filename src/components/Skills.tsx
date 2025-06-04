@@ -1,24 +1,18 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const Skills = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
+    // Simple fade-in animations on mount
     gsap.from('.skills-header', {
       y: 50,
       opacity: 0,
       duration: 1,
       ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.skills-header',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.2
     })
 
     gsap.from('.skill-item', {
@@ -27,11 +21,7 @@ const Skills = () => {
       duration: 0.6,
       ease: 'power3.out',
       stagger: 0.1,
-      scrollTrigger: {
-        trigger: '.skills-grid',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.5
     })
   }, { scope: containerRef })
 

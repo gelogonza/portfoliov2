@@ -6,17 +6,13 @@ const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    // Animate section header
+    // Simple fade-in animations on mount
     gsap.from('.projects-header', {
       y: 50,
       opacity: 0,
       duration: 1,
       ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.projects-header',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.2
     })
 
     // Animate project cards
@@ -26,11 +22,7 @@ const Projects = () => {
       duration: 0.8,
       ease: 'power3.out',
       stagger: 0.2,
-      scrollTrigger: {
-        trigger: '.projects-grid',
-        start: 'top 75%',
-        toggleActions: 'play none none reverse'
-      }
+      delay: 0.5
     })
   }, { scope: containerRef })
 
@@ -46,7 +38,7 @@ const Projects = () => {
       title: "Portfolio V1",
       description: "A responsive personal portfolio website showcasing my skills and projects.",
       technologies: ["React", "Next.js", "Tailwind CSS"],
-      liveDemo: "https://gelo-two.vercel.app/#contact",
+      liveDemo: "https://gelo-two.vercel.app",
       github: "https://github.com/gelogonza/geloportv2"
     },
     {
