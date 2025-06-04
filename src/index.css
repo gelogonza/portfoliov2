@@ -12,6 +12,8 @@
   
   body {
     @apply bg-dark text-white font-satoshi antialiased;
+    /* Ensure gradient animation starts immediately */
+    opacity: 1;
   }
 }
 
@@ -26,8 +28,12 @@
 
   .gradient-bg {
     @apply animate-gradient-x;
-    background: linear-gradient(to right, #000000, #0A0A0A, rgba(255, 0, 0, 0.05), #0A0A0A, #000000);
-    background-size: 200% auto;
+    background: linear-gradient(-45deg, #000000, #0A0A0A, rgba(255, 0, 0, 0.08), #0A0A0A, #000000);
+    background-size: 400% 400%;
+    /* Ensure animation starts immediately */
+    will-change: background-position;
+    animation-fill-mode: both;
+    animation-play-state: running;
   }
 
   .nav-link {
@@ -39,6 +45,16 @@
            hover:bg-transparent hover:text-white hover:border-white/50
            active:bg-white/10
            transition-all duration-200;
+  }
+}
+
+/* Enhanced gradient animation with better performance */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 

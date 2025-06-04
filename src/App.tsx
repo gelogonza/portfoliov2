@@ -1,5 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { useEffect } from 'react'
 
 // Import components
 import Navbar from './components/Navbar'
@@ -12,10 +13,23 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 
 function App() {
-  // Initialize GSAP
+  // Ensure animations start after page load
+  useEffect(() => {
+    // Force animation restart on mount
+    document.body.style.opacity = '1'
+  }, [])
+
+  // Initialize GSAP with better performance settings
   useGSAP(() => {
-    // Set up any global animations here
-    gsap.to('body', { opacity: 1, duration: 1 })
+    // Set up any global animations here with reduced motion support
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.to('body', { opacity: 1, duration: 0.5 })
+      
+      // Ensure gradient animation starts
+      gsap.set('.gradient-bg', { 
+        backgroundPosition: '0% 50%'
+      })
+    }
   })
 
   return (

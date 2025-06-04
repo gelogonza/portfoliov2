@@ -49,6 +49,8 @@ const Hero = () => {
                 src="/angelo.jpeg" 
                 alt="Angelo Gonzalez" 
                 className="w-full h-full object-cover transition-all duration-500"
+                loading="eager"
+                decoding="async"
               />
               
               {/* Noir overlay effect */}

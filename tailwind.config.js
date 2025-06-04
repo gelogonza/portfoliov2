@@ -29,5 +29,13 @@ export default {
         },
       }
     },
-    plugins: []
+    plugins: [],
+    // Performance optimizations
+    corePlugins: {
+      preflight: true,
+    },
+    // Ensure CSS is extracted properly
+    experimental: {
+      optimizeUniversalDefaults: true,
+    }
   }
