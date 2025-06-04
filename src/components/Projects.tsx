@@ -36,46 +36,50 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Portfolio V2",
+      description: "Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, glass-morphism effects, and a professional dark theme design.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "GSAP"],
+      liveDemo: "https://angelogonzalez.dev",
+      github: "https://github.com/gelogonza/portfoliov2"
+    },
+    {
       title: "Portfolio V1",
       description: "A responsive personal portfolio website showcasing my skills and projects.",
       technologies: ["React", "Next.js", "Tailwind CSS"],
-      liveDemo: "https://angelogonzalez.dev",
-      github: "https://github.com/gelogonza/portfoliov2"
+      liveDemo: "https://gelo-two.vercel.app/#contact",
+      github: "https://github.com/gelogonza/geloportv2"
     },
     {
       title: "PowerTrak",
       description: "The Workout Tracker Web App is a web application designed to help users track their workouts and nutrition. It provides a user-friendly interface for logging exercises, monitoring progress, and managing dietary intake.",
       technologies: ["React", "Firebase", "AWS", "AWS Lambda", "DynamoDB"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "",
+      github: "https://github.com/gelogonza/PowerTrak"
     },
     {
       title: "Link Website",
       description: "A website that leads to my other projects and social media accounts.",
       technologies: ["HTML", "CSS"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "https://gelo-link.netlify.app",
+      github: "https://github.com/gelogonza/AngeloLink"
     },
     {
       title: "Syro",
       description: "Designed and developed a Music app using Spotify API that allows users to make playlists, view data, control playback on their devices, download music, play music that is downloaded locally, and view other peoples pages with more details and insights.",
       technologies: ["Python", "Django", "Spotify API"],
-      liveDemo: "#",
-      github: "#"
+      github: "https://github.com/gelogonza/Syro"
     },
     {
       title: "Reservation System",
       description: "Console-based application designed to streamline the operations of a restaurant. The program allows users to manage reservations, food orders, table assignments, bill payments, and closing operations in an efficient and user-friendly manner.",
       technologies: ["C++"],
-      liveDemo: "#",
-      github: "#"
+      github: "https://github.com/gelogonza/simplersvp"
     },
     {
       title: "CLI Fitness Tracker",
       description: "Console-based application designed to help users log physical activities, set fitness goals, and track their progress. It provides a simple interface to input data, monitor goals, and generate progress reports.",
       technologies: ["C++"],
-      liveDemo: "#",
-      github: "#"
+      github: "https://github.com/gelogonza/FitnessTracker"
     }
   ]
 
