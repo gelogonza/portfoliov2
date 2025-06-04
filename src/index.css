@@ -27,11 +27,17 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(to right, #000000, #0A0A0A, rgba(255, 0, 0, 0.05), #0A0A0A, #000000);
-    background-size: 200% auto;
+    background: linear-gradient(90deg, #000000 0%, #0A0A0A 25%, rgba(255, 0, 0, 0.05) 50%, #0A0A0A 75%, #000000 100%);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-animation: gradient-shift 15s ease infinite;
+    -moz-animation: gradient-shift 15s ease infinite;
     animation: gradient-shift 15s ease infinite;
     /* Ensure animation starts immediately */
     will-change: background-position;
+    /* Force hardware acceleration */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 
   .nav-link {
@@ -46,7 +52,25 @@
   }
 }
 
-/* Enhanced gradient animation with better performance */
+/* Enhanced gradient animation with better browser compatibility */
+@-webkit-keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@-moz-keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
