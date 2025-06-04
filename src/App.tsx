@@ -29,7 +29,7 @@ function App() {
 
   return (
     // Main container with gradient background
-    <div className="relative gradient-bg">
+    <div className="relative min-h-screen w-full gradient-bg">
       {/* Fixed navigation */}
       <Navbar />
       

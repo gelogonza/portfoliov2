@@ -27,17 +27,33 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(90deg, #000000 0%, #0A0A0A 25%, rgba(255, 0, 0, 0.05) 50%, #0A0A0A 75%, #000000 100%);
-    background-size: 200% 100%;
+    /* Fallback background */
+    background-color: #000000;
+    /* Animated gradient */
+    background: linear-gradient(90deg, 
+      #000000 0%, 
+      #0A0A0A 20%, 
+      rgba(255, 0, 0, 0.1) 40%, 
+      rgba(255, 0, 0, 0.15) 50%, 
+      rgba(255, 0, 0, 0.1) 60%, 
+      #0A0A0A 80%, 
+      #000000 100%);
+    background-size: 300% 100%;
     background-position: 0% 50%;
-    -webkit-animation: gradient-shift 15s ease infinite;
-    -moz-animation: gradient-shift 15s ease infinite;
-    animation: gradient-shift 15s ease infinite;
-    /* Ensure animation starts immediately */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Animation with fallbacks */
+    -webkit-animation: gradient-shift 12s ease-in-out infinite;
+    -moz-animation: gradient-shift 12s ease-in-out infinite;
+    animation: gradient-shift 12s ease-in-out infinite;
+    
+    /* Performance optimizations */
     will-change: background-position;
-    /* Force hardware acceleration */
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .nav-link {
@@ -54,29 +70,56 @@
 
 /* Enhanced gradient animation with better browser compatibility */
 @-webkit-keyframes gradient-shift {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 @-moz-keyframes gradient-shift {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
