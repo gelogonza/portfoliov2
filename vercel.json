@@ -4,7 +4,6 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "functions": {},
   "headers": [
     {
       "source": "/assets/(.*)",
