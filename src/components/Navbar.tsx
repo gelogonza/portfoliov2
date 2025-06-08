@@ -19,29 +19,30 @@ const Navbar = () => {
     setIsMobileMenuOpen(false)
   }
 
-  // Smooth scroll function
+  // Smooth scroll function with offset for fixed navbar
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const navbarHeight = 80 // 20 * 4 = 80px (h-20 in Tailwind)
+      const elementPosition = element.offsetTop - navbarHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
   // Scroll to top function
   const scrollToTop = () => {
-    const heroElement = document.getElementById('hero')
-    if (heroElement) {
-      heroElement.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      // Fallback to top scroll if hero element not found
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-sm bg-black/50' : ''
+        isScrolled 
+          ? 'backdrop-blur-lg bg-black/90 border-b border-red-500/50 shadow-xl' 
+          : 'bg-transparent backdrop-blur-none'
       }`}>
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           {/* Logo */}
@@ -50,7 +51,7 @@ const Navbar = () => {
               e.preventDefault()
               scrollToTop()
             }} 
-            className="text-2xl font-bold z-50 relative bg-transparent border-none text-white cursor-pointer hover:text-white/80 transition-colors"
+            className="text-2xl font-bold z-50 relative bg-transparent border-none text-white cursor-pointer hover:text-red-400 transition-colors duration-300"
           >
             AG
           </button>

@@ -36,21 +36,21 @@ const Projects = () => {
     },
     {
       title: "Portfolio V1",
-      description: "A responsive personal portfolio website showcasing my skills and projects.",
+      description: "A responsive personal portfolio website showcasing my skills and projects. Using a blue color scheme. inspired by Brittany Chiang's old portfolio",
       technologies: ["React", "Next.js", "Tailwind CSS"],
       liveDemo: "https://gelo-two.vercel.app",
       github: "https://github.com/gelogonza/geloportv2"
     },
     {
       title: "PowerTrak",
-      description: "The Workout Tracker Web App is a web application designed to help users track their workouts and nutrition. It provides a user-friendly interface for logging exercises, monitoring progress, and managing dietary intake.",
+      description: "PowerTrak is a web application designed to help users track their workouts and nutrition. It provides a user-friendly interface for logging exercises, monitoring progress, and managing dietary intake. It is a full stack application that uses Firebase for authentication and storage, and AWS for hosting and scaling.",
       technologies: ["React", "Firebase", "AWS", "AWS Lambda", "DynamoDB"],
       liveDemo: "",
       github: "https://github.com/gelogonza/PowerTrak"
     },
     {
       title: "Link Website",
-      description: "A website that leads to my other projects and social media accounts.",
+      description: "A website that leads to my other projects and social media accounts. It is a simple website that uses HTML and CSS.",
       technologies: ["HTML", "CSS"],
       liveDemo: "https://gelo-link.netlify.app",
       github: "https://github.com/gelogonza/AngeloLink"
