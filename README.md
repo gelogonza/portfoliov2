@@ -20,7 +20,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Animations**: GSAP (GreenSock Animation Platform)
 - **Build Tool**: Vite
 - **Deployment**: Vercel
-- **Font**: Satoshi (via Fontshare)
+- **Font**: Satoshi 
 
 ## Installation
 
@@ -193,8 +193,3 @@ The built files will be in the `dist/` directory.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
----
-
-⭐ Star this repo if you found it helpful!
