@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features an animated gradient background, smooth scrolling navigation, and elegant animations powered by GSAP.
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Optimized for all device sizes from mobile to desktop
 - **Animated Gradient Background**: Beautiful black-to-red gradient with smooth animation
@@ -12,7 +12,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **TypeScript**: Full type safety and better developer experience
 - **Performance Optimized**: Fast loading and smooth animations
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend Framework**: React 18
 - **Language**: TypeScript
@@ -20,9 +20,9 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Animations**: GSAP (GreenSock Animation Platform)
 - **Build Tool**: Vite
 - **Deployment**: Vercel
-- **Font**: Satoshi (via Fontshare)
+- **Font**: Satoshi 
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -47,14 +47,14 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
    Navigate to `http://localhost:5173`
 
-## 🏗️ Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint
 
-## 🎨 Customization
+## Customization
 
 ### Gradient Colors
 
@@ -84,7 +84,7 @@ To modify, edit the `.gradient-bg` class in `src/index.css`:
 - **Skills**: Edit `src/components/Skills.tsx`
 - **Projects**: Update `src/components/Projects.tsx`
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 portfolio-v2/
@@ -108,7 +108,7 @@ portfolio-v2/
 └── vercel.json             # Vercel deployment config
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -133,7 +133,7 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
-## 🎯 Sections Overview
+## Sections Overview
 
 ### Hero Section
 
@@ -167,7 +167,7 @@ The built files will be in the `dist/` directory.
 - Technology stacks used
 - Links to live demos and repositories
 
-## 🎨 Design Features
+## Design Features
 
 - **Animated Gradient**: Smooth left-to-right gradient animation (15s cycle)
 - **Glass Morphism**: Subtle backdrop blur effects
@@ -175,14 +175,14 @@ The built files will be in the `dist/` directory.
 - **Responsive Typography**: Scales from mobile to desktop
 - **Interactive Elements**: Hover states and micro-animations
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -190,17 +190,6 @@ The built files will be in the `dist/` directory.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-Angelo Gonzalez - [angelo3649@icloud.com](mailto:angelo3649@icloud.com)
-
-- GitHub: [@gelogonza](https://github.com/gelogonza)
-- LinkedIn: [angelo-gonza](https://linkedin.com/in/angelo-gonza)
-
----
-
-⭐ Star this repo if you found it helpful!
