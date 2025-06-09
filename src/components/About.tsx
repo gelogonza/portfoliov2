@@ -66,13 +66,13 @@ const About = () => {
               <div className="about-text">
                 <h3 className="text-xl font-semibold text-white mb-4">Beyond Coding</h3>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  When I'm not coding, I'm running outside, cycling, or in the gym chasing a pump. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows.
+                  When I'm not coding, I'm running outside, cycling, or in the gym chasing a pump. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows. My favorite shows are Dexter, Breaking Bad, and Beef. Anime-wise, I'm a big fan of Attack on Titan, Naruto, Death Note, and Jujutsu Kaisen.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
                   I'm really passionate about fitness and touching grass. I think it should be mandatory to exercise and do other things when you're on a computer for most of the day. I also love meeting new people and trying new food to experience different cultures.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  I'm also someone who values continuous learning beyond just programming. I enjoy reading about entrepreneurship, psychology, and design thinking, and I'm always curious about how different industries solve complex problems. This broader perspective helps me approach software development with empathy and creativity.
+                  I'm someone who values continuous learning beyond just programming. I enjoy reading about entrepreneurship, technology, space, psychology, and design thinking. I'm always curious about how different industries solve complex problems. This broader perspective helps me approach software development with empathy and creativity.
                 </p>
               </div>
             </div>
