@@ -72,7 +72,7 @@ const Projects = () => {
       description: "Console-based application designed to help users log physical activities, set fitness goals, and track their progress. It provides a simple interface to input data, monitor goals, and generate progress reports.",
       technologies: ["C++"],
       github: "https://github.com/gelogonza/FitnessTracker"
-    }
+    },
     {
       title: "Wordle Clone",
       description: "Simple Wordle Clone, done for a class.",
