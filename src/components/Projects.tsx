@@ -73,6 +73,12 @@ const Projects = () => {
       technologies: ["C++"],
       github: "https://github.com/gelogonza/FitnessTracker"
     }
+    {
+      title: "Wordle Clone",
+      description: "Simple Wordle Clone, done for a class.",
+      technologies: ["Swift", "XCode", "SwiftUI"],
+      github: "https://github.com/angelo-gonza/Wordle"
+    }
   ]
 
   return (
