@@ -50,8 +50,13 @@ const Experience = () => {
     {
       title: "Software Engineer Intern",
       company: "Infosys",
-      period: "Current",
-      description: "Working on software development projects and gaining industry experience in professional software engineering practices.",
+      period: "June 2025 - August 2025",
+      description: `• Engineered an automated PII detection and redaction system for PDF documents in Python, ensuring data
+privacy compliance and reducing manual review workload by 70%
+• Implemented a regex and token-based algorithm to identify and redact sensitive data (e.g., SSNs, bank accounts,
+credit info), producing timestamped redacted PDFs with audit-ready reports
+• Designed a dual-mode PDF pipeline supporting text-based and scanned files by integrating Google Document
+AI OCR for high-accuracy extraction`,
       type: "professional"
     },
     {
@@ -60,7 +65,31 @@ const Experience = () => {
       period: "Current",
       description: "Active member exploring the intersection of finance and technology, participating in discussions and projects related to financial innovation.",
       type: "extracurricular"
-    }
+    },
+    {
+      title: "Software Engineer Intern",
+      company: "Indiana University Bloomington",
+      period: "Current",
+      description: `• Building and configuring Nvidia Jetson embedded GPU platforms with CUDA for portable nanopore
+sequencing; optimizing workflows with MinKNOW and Dorado on Linux
+• Processing ONT datasets using Guppy, minimap2, Medaka, performing basecalling, alignment, methylation, and
+variant calling
+• Training Machine Learning models with HIV mutation datasets, making a teacher/student model where we can
+rank medicines on a score-based system`,
+      type: "professional"
+    },
+    {
+      title: "Freelance Software Engineer",
+      company: "F Perez Concrete",
+      period: "July 2025 - September 2025",
+  description: `• Built and deployed a Next.js full-stack web app with 40% faster load times and a Mapbox-powered quote
+calculator, cutting manual prep time by 50%
+• Engineered a secure admin dashboard with JWT authentication, REST APIs, file uploads, and revenue tracking,
+saving 5-10 hrs/week.
+• Integrated Google Analytics API to track visitor behavior and conversions, providing actionable insights to increase
+site traffic, SEO, and lead quality`,
+  type: "professional"
+    },
   ]
 
   const courses = [
@@ -206,7 +235,7 @@ const Experience = () => {
                       </div>
                       <span className="text-white/60 mt-2 md:mt-0">{exp.period}</span>
                     </div>
-                    <p className="text-white/80 leading-relaxed">{exp.description}</p>
+                    <p className="text-white/80 leading-relaxed whitespace-pre-line">{exp.description}</p>
                   </div>
                 ))}
               </div>
