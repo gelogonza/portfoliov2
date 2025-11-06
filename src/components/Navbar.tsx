@@ -66,7 +66,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://docs.google.com/document/d/1kCLPsWczTs90m72RffRdp8wZUFA7FxrpF2UyIyUKw0I/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+            <a href="https://drive.google.com/file/d/1sXSb0xKSDz4AKh0H84zs-Z3NuS5dzzGi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
               Resume
             </a>
             <a href="mailto:angelo3649@icloud.com" className="btn-primary">
