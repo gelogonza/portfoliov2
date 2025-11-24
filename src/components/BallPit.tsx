@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useRef, useState } from 'react'
-import { Physics, useSphere, usePlane, useBox } from '@react-three/cannon'
+import { Physics, useSphere, useBox } from '@react-three/cannon'
 
 // Individual ball component with physics
 function Ball({ position, color, pattern }: { position: [number, number, number]; color: string; pattern: string }) {
