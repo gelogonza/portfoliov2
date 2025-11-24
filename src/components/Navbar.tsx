@@ -49,12 +49,12 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           {/* Logo */}
-          <button 
+          <button
             onClick={(e) => {
               e.preventDefault()
               scrollToTop()
-            }} 
-            className="text-2xl font-bold z-50 relative bg-transparent border-none text-white cursor-pointer hover:text-red-400 transition-colors duration-300"
+            }}
+            className="text-2xl font-bold z-50 relative bg-transparent border-none text-white cursor-pointer hover:text-black transition-colors duration-300"
           >
             AG
           </button>
