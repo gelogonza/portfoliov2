@@ -40,24 +40,24 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="flex justify-center mb-8">
           <div className="hero-image relative">
-            {/* Red glow effect behind image */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/20 to-transparent rounded-full blur-xl scale-110"></div>
-            
+            {/* Glow effect behind image */}
+            <div className="absolute inset-0 rounded-full blur-xl scale-110" style={{ background: 'radial-gradient(circle, rgba(138, 206, 0, 0.2) 0%, transparent 70%)' }}></div>
+
             {/* Main image container */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
-              <img 
-                src="/angelo.jpeg" 
-                alt="Angelo Gonzalez" 
+              <img
+                src="/angelo.jpeg"
+                alt="Angelo Gonzalez"
                 className="w-full h-full object-cover transition-all duration-500"
                 loading="eager"
                 decoding="async"
               />
-              
+
               {/* Noir overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-              
-              {/* Red accent border animation */}
-              <div className="absolute inset-0 rounded-full border-2 border-red-500/0 hover:border-red-500/50 transition-all duration-500"></div>
+
+              {/* Green accent border animation */}
+              <div className="absolute inset-0 rounded-full border-2 transition-all duration-500" style={{ borderColor: 'rgba(138, 206, 0, 0)' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(138, 206, 0, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(138, 206, 0, 0)'}></div>
             </div>
           </div>
         </div>

@@ -41,8 +41,8 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Red accent line */}
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+          {/* Accent line */}
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#8ace00]/50 to-transparent"></div>
 
           {/* Copyright */}
           <div className="text-center text-white/40 text-sm">
