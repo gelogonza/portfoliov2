@@ -34,7 +34,15 @@ const Experience = () => {
       credentialId: "17F9543DC8AB3B1B",
       skills: ["Azure AI", "Azure AI Foundry", "Machine Learning", "Cognitive Services", "Natural Language Processing", "Computer Vision", "AI Ethics", "Cloud Computing", "Azure Portal", "AI Model Training"],
       badgeId: "AI-900",
-      badgeImage: "/images/microsoft.svg"
+      badgeImage: "/images/microsoft.png"
+    },
+    {
+      title: "Docker Foundations Professional Certificate",
+      issuer: "Docker",
+      issuedDate: "2025",
+      description: "Completed Docker Fundamentals certification covering containerization concepts, Docker architecture, and container orchestration.",
+      skills: ["Docker", "Containerization", "Docker Compose", "DevOps", "Container Orchestration", "Microservices", "CI/CD", "Docker Hub", "Container Security", "Image Management"],
+      badgeImage: "/images/docker.png"
     },
     {
       title: "Verizon Cloud Platform",
@@ -158,7 +166,6 @@ site traffic, SEO, and lead quality`,
           {/* Section Header */}
           <div className="experience-header text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Experience</h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto"></div>
           </div>
 
           <div className="experience-content space-y-12">
@@ -167,7 +174,7 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold text-white mb-8">Licenses & Certifications</h3>
               <div className="grid gap-6">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-red-500/30 transition-all duration-300">
+                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row gap-6">
                       {/* Badge Icon - Consistent styling */}
                       <div className="flex-shrink-0">
@@ -190,15 +197,15 @@ site traffic, SEO, and lead quality`,
                       <div className="flex-1">
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                           <div>
-                            <h4 className="text-xl font-semibold text-white mb-1">{cert.title}</h4>
-                            <p className="text-red-400 font-medium mb-1">{cert.issuer}</p>
+                            <h4 className="text-xl font-semibold text-black mb-1">{cert.title}</h4>
+                            <p className="text-black font-medium mb-1">{cert.issuer}</p>
                             <p className="text-white/60 text-sm">Issued {cert.issuedDate}</p>
                             {cert.credentialId && (
                               <p className="text-white/60 text-sm">Credential ID {cert.credentialId}</p>
                             )}
                           </div>
                         </div>
-                        
+
                         {cert.description && (
                           <p className="text-white/80 leading-relaxed mb-4">{cert.description}</p>
                         )}
@@ -206,9 +213,10 @@ site traffic, SEO, and lead quality`,
                         {cert.skills && (
                           <div className="flex flex-wrap gap-2 mt-3">
                             {cert.skills.map((skill, skillIndex) => (
-                              <span 
-                                key={skillIndex} 
-                                className="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-full border border-red-500/30"
+                              <span
+                                key={skillIndex}
+                                style={{backgroundColor: '#000000', color: '#8ace00'}}
+                                className="px-3 py-1 text-sm rounded-full border border-black"
                               >
                                 {skill}
                               </span>
@@ -227,11 +235,11 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold text-white mb-8">Professional & Leadership</h3>
               <div className="grid gap-6">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-red-500/30 transition-all duration-300">
+                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
-                        <p className="text-red-400 font-medium">{exp.company}</p>
+                        <h4 className="text-xl font-semibold text-black">{exp.title}</h4>
+                        <p className="text-black font-medium">{exp.company}</p>
                       </div>
                       <span className="text-white/60 mt-2 md:mt-0">{exp.period}</span>
                     </div>
@@ -246,20 +254,21 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold text-white mb-8">Academic Coursework</h3>
               <div className="grid gap-6">
                 {courses.map((course, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-red-500/30 transition-all duration-300">
+                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h4 className="text-xl font-semibold text-white">{course.title}</h4>
-                        <p className="text-red-400 font-medium">{course.institution}</p>
+                        <h4 className="text-xl font-semibold text-black">{course.title}</h4>
+                        <p className="text-black font-medium">{course.institution}</p>
                       </div>
                       <span className="text-white/60 mt-2 md:mt-0">{course.period}</span>
                     </div>
                     <p className="text-white/80 leading-relaxed mb-4">{course.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {course.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex} 
-                          className="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-full border border-red-500/30"
+                        <span
+                          key={techIndex}
+                          style={{backgroundColor: '#000000', color: '#8ace00'}}
+                          className="px-3 py-1 text-sm rounded-full border border-black"
                         >
                           {tech}
                         </span>

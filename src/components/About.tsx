@@ -32,7 +32,6 @@ const About = () => {
           {/* Section Header */}
           <div className="about-content text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto"></div>
           </div>
 
           {/* About Content */}
@@ -53,7 +52,7 @@ const About = () => {
 
               <div className="about-text">
                 <p className="text-lg text-white/80 leading-relaxed">
-                  I've gained hands on experience with <span className="text-red-400">JavaScript</span>, <span className="text-red-400">TypeScript</span>, <span className="text-red-400">Python</span>, <span className="text-red-400">C++</span>, and am learning <span className="text-red-400">Java</span>. I am focused on emphasizing modern frameworks like <span className="text-red-400">React</span>, <span className="text-red-400">Next.js</span>, and generative AI integration. I'm actively developing projects that incorporate AI, clean design, and intuitive/accessible UX, and I deeply value environments that foster quality, creativity, learning, and strong engineering culture.
+                  I've gained hands on experience with <span className="text-white font-medium">JavaScript</span>, <span className="text-white font-medium">TypeScript</span>, <span className="text-white font-medium">Python</span>, <span className="text-white font-medium">C++</span>, and am learning <span className="text-white font-medium">Java</span>. I am focused on emphasizing modern frameworks like <span className="text-white font-medium">React</span>, <span className="text-white font-medium">Next.js</span>, and generative AI integration. I'm actively developing projects that incorporate AI, clean design, and intuitive/accessible UX, and I deeply value environments that foster quality, creativity, learning, and strong engineering culture.
                 </p>
               </div>
 
@@ -66,10 +65,10 @@ const About = () => {
               <div className="about-text">
                 <h3 className="text-xl font-semibold text-white mb-4">Beyond Coding</h3>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  When I'm not coding, I'm running outside, cycling, or in the gym chasing a pump. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows. My favorite shows are Dexter, Breaking Bad, and Beef. Anime-wise, I'm a big fan of Attack on Titan, Naruto, Death Note, and Jujutsu Kaisen.
+                  When I'm not coding, I'm running outside, cycling, or in the gym. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows. I also scroll on pinterest or archive pages and like to engage with fashion, pop culture, art, and music content.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  I'm really passionate about fitness. I think it should be mandatory to exercise and do other things when you're on a computer for most of the day. I also love meeting new people and trying new food to experience different cultures.
+                  I'm really passionate about fitness. I also love meeting new people and trying new food to experience different cultures. 
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed">
                   I'm someone who values continuous learning beyond just programming and designing. I enjoy reading about entrepreneurship, technology, space, psychology, and design thinking. I'm always curious about how different industries solve complex problems. This broader perspective helps me approach software development with empathy and creativity.

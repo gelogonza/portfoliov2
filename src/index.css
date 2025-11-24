@@ -11,7 +11,7 @@
   }
   
   body {
-    @apply text-white font-satoshi antialiased;
+    @apply text-black font-satoshi antialiased;
     /* Remove bg-dark to let the gradient show through */
     background: transparent;
     /* Ensure gradient animation starts immediately */
@@ -29,17 +29,10 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(270deg, 
-      #000000 0%, 
-      #8B0000 25%,
-      #b90f0a 50%, 
-      #8B0000 75%,
-      #000000 100%);
-    background-size: 400% 400%;
+    background: #8ace00;
     background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
-    animation: gradient-shift 15s ease infinite;
   }
 
   .nav-link {

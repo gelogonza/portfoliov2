@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -40,8 +43,8 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'backdrop-blur-lg bg-black/90 border-b border-red-500/50 shadow-xl' 
+        isScrolled
+          ? 'backdrop-blur-lg bg-black/90 border-b border-black shadow-xl'
           : 'bg-transparent backdrop-blur-none'
       }`}>
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
@@ -58,10 +61,17 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('about')} className="nav-link bg-transparent border-none cursor-pointer">About</button>
-            <button onClick={() => scrollToSection('experience')} className="nav-link bg-transparent border-none cursor-pointer">Experience</button>
-            <button onClick={() => scrollToSection('skills')} className="nav-link bg-transparent border-none cursor-pointer">Skills</button>
-            <button onClick={() => scrollToSection('projects')} className="nav-link bg-transparent border-none cursor-pointer">Projects</button>
+            {isHomePage ? (
+              <>
+                <button onClick={() => scrollToSection('about')} className="nav-link bg-transparent border-none cursor-pointer">About</button>
+                <button onClick={() => scrollToSection('experience')} className="nav-link bg-transparent border-none cursor-pointer">Experience</button>
+                <button onClick={() => scrollToSection('skills')} className="nav-link bg-transparent border-none cursor-pointer">Skills</button>
+                <button onClick={() => scrollToSection('projects')} className="nav-link bg-transparent border-none cursor-pointer">Projects</button>
+              </>
+            ) : (
+              <Link to="/" className="nav-link">Home</Link>
+            )}
+            <Link to="/ballpit" className="nav-link">Ball Pit</Link>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -110,42 +120,61 @@ const Navbar = () => {
           <div className="flex flex-col h-full pt-24 pb-8 px-8">
             {/* Navigation Links */}
             <div className="flex flex-col space-y-6 mb-8">
-              <button 
-                onClick={() => {
-                  scrollToSection('about')
-                  handleLinkClick()
-                }}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+              {isHomePage ? (
+                <>
+                  <button
+                    onClick={() => {
+                      scrollToSection('about')
+                      handleLinkClick()
+                    }}
+                    className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+                  >
+                    About
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('experience')
+                      handleLinkClick()
+                    }}
+                    className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+                  >
+                    Experience
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('skills')
+                      handleLinkClick()
+                    }}
+                    className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+                  >
+                    Skills
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('projects')
+                      handleLinkClick()
+                    }}
+                    className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+                  >
+                    Projects
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/"
+                  onClick={handleLinkClick}
+                  className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 text-left"
+                >
+                  Home
+                </Link>
+              )}
+              <Link
+                to="/ballpit"
+                onClick={handleLinkClick}
+                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 text-left"
               >
-                About
-              </button>
-              <button 
-                onClick={() => {
-                  scrollToSection('experience')
-                  handleLinkClick()
-                }}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
-              >
-                Experience
-              </button>
-              <button 
-                onClick={() => {
-                  scrollToSection('skills')
-                  handleLinkClick()
-                }}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
-              >
-                Skills
-              </button>
-              <button 
-                onClick={() => {
-                  scrollToSection('projects')
-                  handleLinkClick()
-                }}
-                className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
-              >
-                Projects
-              </button>
+                Ball Pit
+              </Link>
             </div>
 
             {/* Social Links */}
@@ -187,8 +216,6 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Red accent line */}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mt-6 opacity-50"></div>
           </div>
         </div>
       </div>

@@ -1,16 +1,12 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Import components
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-// import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Home from './components/Home'
+import BallPit from './components/BallPit'
 
 function App() {
   // Ensure animations start after page load
@@ -28,24 +24,19 @@ function App() {
   })
 
   return (
-    // Main container with gradient background
-    <div className="relative min-h-screen w-full gradient-bg">
-      {/* Fixed navigation */}
-      <Navbar />
-      
-      {/* Scrollable sections */}
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        {/* <Contact /> */}
-      </main>
-      
-      {/* Footer */}
-      <Footer />
-    </div>
+    <Router>
+      {/* Main container with gradient background */}
+      <div className="relative min-h-screen w-full gradient-bg">
+        {/* Fixed navigation */}
+        <Navbar />
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ballpit" element={<BallPit />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
