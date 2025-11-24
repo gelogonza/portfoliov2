@@ -68,7 +68,7 @@ const Hero = () => {
             Angelo Gonzalez
           </h1>
           <p className="hero-text text-xl md:text-2xl text-white/70">
-            Software Engineer
+            Software Engineer | Web Developer | Creative
           </p>
           
           {/* Social Links */}

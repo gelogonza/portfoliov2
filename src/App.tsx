@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 
 // Import components
 import Navbar from './components/Navbar'
@@ -36,6 +37,7 @@ function App() {
           <Route path="/ballpit" element={<BallPit />} />
         </Routes>
       </div>
+      <Analytics />
     </Router>
   )
 }
