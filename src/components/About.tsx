@@ -40,13 +40,13 @@ const About = () => {
               {/* Main Bio */}
               <div className="about-text">
                 <p className="text-lg text-white/80 leading-relaxed">
-                  I'm currently a student at <span className="text-white font-medium">Indiana University-Bloomington</span> studying Informatics, with a strong interest in software engineering, full-stack development, product management, and product design. I'm passionate about building meaningful, user-centered products using modern technologies and industry-standard practices.
+                  I'm currently a student at <span className="text-white font-medium">Indiana University-Bloomington</span> studying Informatics, with a strong interest in software engineering, full-stack development, product management, and product design. I'm passionate about building meaningful, user-centered products using modern technologies.
                 </p>
               </div>
 
               <div className="about-text">
                 <p className="text-lg text-white/80 leading-relaxed">
-                  Right now, I'm looking to work with innovative and forward-thinking teams that embrace experimentation, ship fast, and push the boundaries of what's possible. Especially in the space where tech meets community and real-world impact.
+                  Right now, I'm looking to work with innovative and forward-thinking teams that embrace experimentation, innovation, ship fast, and push the boundaries of what's possible. Especially in the space where tech meets community and real-world impact.
                 </p>
               </div>
 
