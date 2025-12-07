@@ -44,10 +44,10 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'backdrop-blur-lg bg-black/90 border-b border-black shadow-xl'
-          : 'bg-transparent backdrop-blur-none'
+          ? 'backdrop-blur-md'
+          : 'backdrop-blur-none'
       }`}>
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-20 flex items-center justify-between relative z-10">
           {/* Logo */}
           <button
             onClick={(e) => {
@@ -101,6 +101,16 @@ const Navbar = () => {
             }`}></span>
           </button>
         </div>
+
+        {/* Bottom gradient blur fade effect */}
+        {isScrolled && (
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent via-black/5 to-black/10 pointer-events-none"
+               style={{
+                 maskImage: 'linear-gradient(to bottom, transparent, black)',
+                 WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)'
+               }}>
+          </div>
+        )}
       </nav>
 
       {/* Mobile Menu Overlay */}
@@ -114,7 +124,7 @@ const Navbar = () => {
         ></div>
         
         {/* Mobile Menu Content */}
-        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] backdrop-blur-xl bg-gradient-to-b from-black/60 via-black/50 to-black/60 border-l border-white/10 transform transition-transform duration-300 ${
+        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] backdrop-blur-xl bg-gradient-to-b from-[#360185]/90 via-[#8F0177]/80 to-[#DE1A58]/90 border-l border-white/10 transform transition-transform duration-300 ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col h-full pt-24 pb-8 px-8">

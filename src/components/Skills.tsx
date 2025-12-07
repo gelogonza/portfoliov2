@@ -93,7 +93,7 @@ const Skills = () => {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-heading">Skills</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">

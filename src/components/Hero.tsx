@@ -64,10 +64,10 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="space-y-6">
-          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold">
+          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold gradient-heading">
             Angelo Gonzalez
           </h1>
-          <p className="hero-text text-xl md:text-2xl text-white/70">
+          <p className="hero-text text-xl md:text-2xl text-white">
             Software Engineer | Web Developer | Creative
           </p>
           

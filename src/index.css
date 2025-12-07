@@ -29,7 +29,7 @@
   }
 
   .gradient-bg {
-    background: #8ace00;
+    background: linear-gradient(180deg, #360185 0%, #8F0177 33%, #DE1A58 66%, #F4B342 100%);
     background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
@@ -44,6 +44,13 @@
            hover:bg-transparent hover:text-white hover:border-white/50
            active:bg-white/10
            transition-all duration-200;
+  }
+
+  .gradient-heading {
+    background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 50%, #FFDAB9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
