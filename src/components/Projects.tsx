@@ -81,6 +81,21 @@ const Projects = () => {
       technologies: ["Swift", "XCode", "SwiftUI"],
       github: "https://github.com/angelo-gonza/Wordle"
     }
+    ,
+    {
+      title: "Breakfast Ordering App",
+      description: "Breakfast ordering website. Allows for adding customers, new items to the order, phone number, email, name, and the ability to update. Also gets orders added to database. Implemented templating for several pages to have a coherent and sleek layout across all pages.",
+      technologies: ["Python, HTML/CSS, SQL, Bootstrap, Flask, Jinja, SSH, Shell"],
+      github: "https://github.iu.edu/i211fa2025/ag38-final-app"
+
+    },
+    {
+      title: "Recipe App",
+      description: "Recipe site that has a list of recipes, you can add, delete, and edit the recipes. Upon clicking on the recipes you will get taken to the page for that recipe where it will have a picture of the recipe, a description, reviews for the recipe, and a link that leads you to the official recipe page. In this app we use sql to have the recipes added to a database, Python for the implementation of the code to get this to work, Flask for the help on having this on the web, HTML/CSS and Bootstrap for the design, Jinja for the templating, and A lot of shell was used in the creation for this as well." ,
+      technologies: ["Python, SQL, HTML/CSS, Bootstrap, SQL, Jinja, Linux"],
+      github:"https://github.iu.edu/i211fa2025/ag38-recipe-app"
+
+    }
   ]
 
   return (
