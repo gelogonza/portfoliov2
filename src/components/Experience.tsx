@@ -92,6 +92,13 @@ site traffic, SEO, and lead quality`,
   type: "professional"
     },
     {
+      title: "Campus Ambassador",
+      company: "Simplify",
+      period: "October 2025 - December 2025",
+      description:"Participated in club outreach, sending emails, posting on social media, promoting to peers and other students on campus, demonstrated using demos, showcased the product, partnered with clubs for email lists and more networking to promote the product.",
+      type:"professional"
+    },
+    {
       title: "Member",
       company: "Fintech Club at IU",
       period: "Current",
