@@ -288,16 +288,18 @@ site traffic, SEO, and lead quality`,
                       <span className="text-white mt-2 md:mt-0">{course.period}</span>
                     </div>
                     <p className="text-white leading-relaxed mb-4">{course.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {course.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    {Array.isArray(course.technologies) && course.technologies.length > 0 ? (
+                      <div className="flex flex-wrap gap-2">
+                        {course.technologies.map((tech: string, techIndex: number) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 ))}
               </div>
