@@ -68,16 +68,9 @@ AI OCR for high-accuracy extraction`,
       type: "professional"
     },
     {
-      title: "Member",
-      company: "Fintech Club at IU",
-      period: "Current",
-      description: "Active member exploring the intersection of finance and technology, participating in discussions and projects related to financial innovation.",
-      type: "extracurricular"
-    },
-    {
       title: "Software Engineer Intern",
       company: "Indiana University Bloomington",
-      period: "Current",
+      period: "August 2025 - December 2025",
       description: `• Building and configuring Nvidia Jetson embedded GPU platforms with CUDA for portable nanopore
 sequencing; optimizing workflows with MinKNOW and Dorado on Linux
 • Processing ONT datasets using Guppy, minimap2, Medaka, performing basecalling, alignment, methylation, and
@@ -97,6 +90,20 @@ saving 5-10 hrs/week.
 • Integrated Google Analytics API to track visitor behavior and conversions, providing actionable insights to increase
 site traffic, SEO, and lead quality`,
   type: "professional"
+    },
+    {
+      title: "Member",
+      company: "Fintech Club at IU",
+      period: "Current",
+      description: "Active member exploring the intersection of finance and technology, participating in discussions and projects related to financial innovation.",
+      type: "extracurricular"
+    },
+    {
+      title: "Chief Technology Officer",
+      company: "Entropic at IU",
+      period: "Current",
+      description: "Active member and officer of Entropic. In charge of planning, communicating, and coming up with project ideas for meetings. We have successfully partnered with Claude Ambassadors, Simplify Ambassadors, and have hosted and participated in hackathons on campus.",
+      type: "extracurricular"
     },
   ]
 
