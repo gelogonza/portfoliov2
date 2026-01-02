@@ -116,6 +116,18 @@ site traffic, SEO, and lead quality`,
 
   const courses = [
     {
+      title: "Social Informatics",
+      institution: "Indiana University Bloomington",
+      period: "August 2025 - December 2025",
+      description: "Learned about how people interact with technologies and the different ways and methods that technologies affect them. Reviewed case studies and applied the knowledge from the class to see what things were in use and how they could've affected people.",
+    },
+    {
+      title: "Information Infrastructure",
+      institution: "Indiana Unviersity Bloomington",
+      period: "August 2025 - December 2025",
+      description: "Learned about Python, web design, full-stack development, databases, shell commands, ssh, hosting online, and git."
+    },
+    {
       title: "Intro to Informatics",
       institution: "Indiana University Bloomington",
       period: "January 2025 - May 2025",
