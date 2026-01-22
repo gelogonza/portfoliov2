@@ -29,7 +29,7 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(180deg, #360185 0%, #8F0177 33%, #DE1A58 66%, #F4B342 100%);
+    background: linear-gradient(180deg, #360185 0%, #29339B 33%, #74a4bc 66%, #b6d6cc 100%);
     background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
@@ -47,7 +47,7 @@
   }
 
   .gradient-heading {
-    background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 50%, #FFDAB9 100%);
+    background: linear-gradient(135deg, #fbfbfb 0%, #ffffff 50%, #b9bfff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
