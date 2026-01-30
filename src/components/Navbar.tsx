@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://drive.google.com/file/d/1BrXT995YiD2_I5lGmYF5doYAxuSdWoVJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+            <a href="https://drive.google.com/file/d/1WdJiEToPJ457wlQRxU3xKjfpwAenIIDb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
               Resume
             </a>
             <a href="mailto:angelo3649@icloud.com" className="btn-primary">
@@ -210,7 +210,7 @@ const Navbar = () => {
             {/* Mobile CTA Buttons */}
             <div className="flex flex-col space-y-4 mt-auto">
               <a 
-                href="https://drive.google.com/file/d/1BrXT995YiD2_I5lGmYF5doYAxuSdWoVJ/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1WdJiEToPJ457wlQRxU3xKjfpwAenIIDb/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center py-3 px-6 border border-white/30 rounded-lg text-white/95 hover:text-white hover:border-white/50 transition-all duration-200 backdrop-blur-sm bg-white/10"
