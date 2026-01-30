@@ -210,7 +210,7 @@ const Navbar = () => {
             {/* Mobile CTA Buttons */}
             <div className="flex flex-col space-y-4 mt-auto">
               <a 
-                href="https://docs.google.com/document/d/1kCLPsWczTs90m72RffRdp8wZUFA7FxrpF2UyIyUKw0I/edit?usp=sharing" 
+                href="https://drive.google.com/file/d/1BrXT995YiD2_I5lGmYF5doYAxuSdWoVJ/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center py-3 px-6 border border-white/30 rounded-lg text-white/95 hover:text-white hover:border-white/50 transition-all duration-200 backdrop-blur-sm bg-white/10"
