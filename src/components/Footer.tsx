@@ -47,7 +47,6 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center text-white/40 text-sm">
             <p>&copy; {new Date().getFullYear()} Angelo Gonzalez. All rights reserved.</p>
-            <p className="mt-1">Built with React, TypeScript & Tailwind CSS</p>
           </div>
         </div>
       </div>
