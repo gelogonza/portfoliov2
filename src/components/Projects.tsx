@@ -97,7 +97,14 @@ const Projects = () => {
       technologies: ["Python, SQL, HTML/CSS, Bootstrap, SQL, Jinja, Linux"],
       github:"https://github.iu.edu/i211fa2025/ag38-recipe-app"
 
-    }
+    },
+    {
+      title: "Recipe Page",
+      description: "Recipe page that is a single column for Tacos Al Pastor. Used Basic HTML/CSS for styling, links for recipe, ordered/unordered lists. Used google fonts for text styling, tables, figures, figcaptions, and other methods.",
+      technologies: ["HTML, CSS"],
+      liveDemo: "https://gelogonza.github.io/recipe-website/",
+      github: "https://github.com/gelogonza/recipe-website"
+  },
   ]
 
   const goToPrevious = () => {
