@@ -100,7 +100,7 @@ const Skills = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-white/50 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-white/20"
+                className="group bg-white border border-orange-400 rounded-xl p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-black/20"
               >
                 <div className="flex flex-col items-center space-y-3">
                   <div className="w-12 h-12 flex items-center justify-center">
@@ -117,7 +117,7 @@ const Skills = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-white/90 font-medium text-sm group-hover:text-white transition-colors duration-300">
+                  <span className="text-gray-800 font-medium text-sm transition-colors duration-300">
                     {skill.name}
                   </span>
                 </div>

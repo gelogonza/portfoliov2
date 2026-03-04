@@ -41,7 +41,7 @@ const Hero = () => {
         <div className="flex justify-center mb-8">
           <div className="hero-image relative">
             {/* Glow effect behind image */}
-            <div className="absolute inset-0 rounded-full blur-xl scale-110" style={{ background: 'radial-gradient(circle, rgba(138, 206, 0, 0.2) 0%, transparent 70%)' }}></div>
+            <div className="absolute inset-0 rounded-full blur-xl scale-110" style={{ background: 'radial-gradient(circle, rgba(184, 69, 0, 0.2) 0%, transparent 70%)' }}></div>
 
             {/* Main image container */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
@@ -56,8 +56,8 @@ const Hero = () => {
               {/* Noir overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
-              {/* Green accent border animation */}
-              <div className="absolute inset-0 rounded-full border-2 transition-all duration-500" style={{ borderColor: 'rgba(138, 206, 0, 0)' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(138, 206, 0, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(138, 206, 0, 0)'}></div>
+              {/* Orange accent border animation */}
+              <div className="absolute inset-0 rounded-full border-2 transition-all duration-500" style={{ borderColor: 'rgba(184, 69, 0, 0)' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(184, 69, 0, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(184, 69, 0, 0)'}></div>
             </div>
           </div>
         </div>
