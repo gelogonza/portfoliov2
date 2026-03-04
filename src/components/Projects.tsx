@@ -147,7 +147,7 @@ const Projects = () => {
           <div className="carousel-container flex flex-col items-center justify-center px-4 py-8 md:px-8 md:py-12">
             {/* Carousel */}
             <div 
-              className="relative w-full flex items-center justify-center min-h-[350px] md:min-h-[450px] lg:min-h-[500px]"
+              className="relative w-full flex items-center justify-center min-h-[420px] md:min-h-[500px] lg:min-h-[580px]"
               role="region"
               aria-label="Projects carousel"
               aria-roledescription="carousel"
@@ -171,7 +171,7 @@ const Projects = () => {
                       stiffness: 300,
                       damping: 30,
                     }}
-                    className="absolute w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 md:border-4 border-white/20 backdrop-blur-2xl bg-white/10"
+                    className="absolute w-80 h-96 md:w-96 md:h-[28rem] lg:w-[28rem] lg:h-[32rem] rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 md:border-4 border-white/20 backdrop-blur-2xl bg-white/10"
                     role="group"
                     aria-label={`Slide ${index + 1} of ${projects.length}`}
                     aria-hidden={index !== currentIndex}
@@ -190,11 +190,11 @@ const Projects = () => {
 
                       {/* Technologies */}
                       <div className="space-y-4">
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                           {project.technologies.slice(0, 4).map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-3 py-1 text-xs md:text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
+                              className="px-4 py-1.5 text-xs md:text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
                             >
                               {tech}
                             </span>
