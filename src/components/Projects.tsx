@@ -105,6 +105,13 @@ const Projects = () => {
       liveDemo: "https://gelogonza.github.io/recipe-website/",
       github: "https://github.com/gelogonza/recipe-website"
   },
+  {
+    title: "Game Glitch Investigator",
+    description: "A number guessing game where the player tries to guess a randomly chosen secret number within a set number of attempts. Each wrong guess provides a hint (go higher or lower), and the score is based on how few attempts it took to win.",
+    technologies: ["Python, Claude"],
+    liveDemo: "https://ai110gameglitchinvestigator.streamlit.app/",
+    github: "https://github.com/gelogonza/ai110-module1show-gameglitchinvestigator"
+  },
   ]
 
   const goToPrevious = () => {
