@@ -43,6 +43,18 @@ const Projects = () => {
       figmaEmbed: "https://embed.figma.com/design/3BHfZx6b7uaCaX3OKfZGKG/Untitled?node-id=0-1&embed-host=share"
     },
     {
+      title: "Figma Design 2",
+      description: "UI/UX design prototype created in Figma.",
+      technologies: ["Figma", "UI/UX"],
+      figmaEmbed: "https://embed.figma.com/design/DgrxhONhSXy5xPJm2lRgAv/Untitled?node-id=0-1&embed-host=share"
+    },
+    {
+      title: "AI ChatBot",
+      description: "AI ChatBot UI/UX design prototype created in Figma.",
+      technologies: ["Figma", "UI/UX", "AI"],
+      figmaEmbed: "https://embed.figma.com/design/F59nFjugImdPKOe2Ktv27j/AI-ChatBot?node-id=0-1&embed-host=share"
+    },
+    {
       title: "Portfolio V2",
       description: "Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, glass-morphism effects, and a professional dark theme design.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "GSAP"],
@@ -160,7 +172,7 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 projects-header">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-heading">Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 pb-1 gradient-heading">Projects</h2>
           </div>
 
           {/* Carousel Container */}
