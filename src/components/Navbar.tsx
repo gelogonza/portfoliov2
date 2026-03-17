@@ -67,6 +67,7 @@ const Navbar = () => {
                 <button onClick={() => scrollToSection('experience')} className="nav-link bg-transparent border-none cursor-pointer">Experience</button>
                 <button onClick={() => scrollToSection('skills')} className="nav-link bg-transparent border-none cursor-pointer">Skills</button>
                 <button onClick={() => scrollToSection('projects')} className="nav-link bg-transparent border-none cursor-pointer">Projects</button>
+                <button onClick={() => scrollToSection('creative')} className="nav-link bg-transparent border-none cursor-pointer">Creative</button>
               </>
             ) : (
               <Link to="/" className="nav-link">Home</Link>
@@ -167,6 +168,15 @@ const Navbar = () => {
                     className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
                   >
                     Projects
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('creative')
+                      handleLinkClick()
+                    }}
+                    className="text-2xl font-medium text-white/95 hover:text-white hover:translate-x-2 transition-all duration-200 bg-transparent border-none cursor-pointer text-left"
+                  >
+                    Creative
                   </button>
                 </>
               ) : (

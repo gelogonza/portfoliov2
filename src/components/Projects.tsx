@@ -28,7 +28,20 @@ const Projects = () => {
     })
   }, { scope: containerRef })
 
-  const projects = [
+  const projects: {
+    title: string
+    description?: string
+    technologies: string[]
+    liveDemo?: string
+    github?: string
+    figmaEmbed?: string
+  }[] = [
+    {
+      title: "Figma Design",
+      description: "UI/UX design prototype created in Figma.",
+      technologies: ["Figma", "UI/UX"],
+      figmaEmbed: "https://embed.figma.com/design/3BHfZx6b7uaCaX3OKfZGKG/Untitled?node-id=0-1&embed-host=share"
+    },
     {
       title: "Portfolio V2",
       description: "Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, glass-morphism effects, and a professional dark theme design.",
@@ -184,6 +197,35 @@ const Projects = () => {
                     aria-hidden={index !== currentIndex}
                   >
                     {/* Card Content */}
+                    {project.figmaEmbed ? (
+                      <div className="h-full w-full flex flex-col">
+                        {/* Figma Embed */}
+                        <div className="flex-1 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
+                          <iframe
+                            src={project.figmaEmbed}
+                            className="w-full h-full border-0"
+                            allowFullScreen
+                            style={{ pointerEvents: index === currentIndex ? 'auto' : 'none' }}
+                          />
+                        </div>
+                        {/* Info */}
+                        <div className="p-4 md:p-5 flex flex-col gap-2 bg-white/5">
+                          <h3 className="text-lg md:text-xl font-bold text-white">
+                            {project.title}
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className="px-3 py-1 text-xs text-white bg-white/10 rounded-full border border-white/20"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
                     <div className="h-full w-full p-6 md:p-8 flex flex-col justify-between">
                       {/* Header */}
                       <div>
@@ -239,6 +281,7 @@ const Projects = () => {
                               Demo
                             </a>
                           )}
+                          {project.github && (
                           <a
                             href={project.github}
                             target="_blank"
@@ -259,9 +302,11 @@ const Projects = () => {
                             </svg>
                             GitHub
                           </a>
+                          )}
                         </div>
                       </div>
                     </div>
+                    )}
                   </motion.div>
                 )
               })}
