@@ -272,14 +272,14 @@ const Projects = () => {
               <button
                 onClick={goToPrevious}
                 aria-label="Previous slide"
-                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200 backdrop-blur-lg"
+                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-orange-400/50 transition-all duration-200 backdrop-blur-lg"
               >
                 <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" aria-hidden="true" />
               </button>
               <button
                 onClick={goToNext}
                 aria-label="Next slide"
-                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200 backdrop-blur-lg"
+                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-orange-400/50 transition-all duration-200 backdrop-blur-lg"
               >
                 <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" aria-hidden="true" />
               </button>

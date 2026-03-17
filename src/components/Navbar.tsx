@@ -124,7 +124,7 @@ const Navbar = () => {
         ></div>
         
         {/* Mobile Menu Content */}
-        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] backdrop-blur-xl bg-gradient-to-b from-[#360185]/95 via-[#29339B]/90 to-[#74a4bc]/90 border-l border-white/10 transform transition-transform duration-300 ${
+        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] backdrop-blur-xl bg-gradient-to-b from-[#b84500]/95 via-[#d4621a]/90 to-[#e8935a]/90 border-l border-white/10 transform transition-transform duration-300 ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col h-full pt-24 pb-8 px-8">
