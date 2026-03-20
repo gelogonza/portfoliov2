@@ -25,13 +25,17 @@ const Hero = () => {
     })
 
     // Subtle floating animation for the image
-    gsap.to('.hero-image', {
+    const floatTween = gsap.to('.hero-image', {
       y: -10,
       duration: 3,
       repeat: -1,
       yoyo: true,
       ease: 'power2.inOut'
     })
+
+    return () => {
+      floatTween.kill()
+    }
   }, { scope: containerRef })
 
   return (

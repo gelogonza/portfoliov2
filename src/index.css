@@ -30,7 +30,6 @@
 
   .gradient-bg {
     background: linear-gradient(180deg, #b84500 0%, #d4621a 33%, #e8935a 66%);
-    background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
   }

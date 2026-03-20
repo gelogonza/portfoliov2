@@ -218,14 +218,15 @@ const Projects = () => {
                     {/* Card Content */}
                     {project.figmaEmbed ? (
                       <div className="h-full w-full flex flex-col">
-                        {/* Figma Embed */}
+                        {/* Figma Embed — only mounted when this card is active */}
                         <div className="flex-1 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
-                          <iframe
-                            src={project.figmaEmbed}
-                            className="w-full h-full border-0"
-                            allowFullScreen
-                            style={{ pointerEvents: index === currentIndex ? 'auto' : 'none' }}
-                          />
+                          {index === currentIndex && (
+                            <iframe
+                              src={project.figmaEmbed}
+                              className="w-full h-full border-0"
+                              allowFullScreen
+                            />
+                          )}
                         </div>
                         {/* Info */}
                         <div className="p-4 md:p-5 flex flex-col gap-2 bg-white/5">
