@@ -137,6 +137,13 @@ const Projects = () => {
     liveDemo: "https://ai110gameglitchinvestigator.streamlit.app/",
     github: "https://github.com/gelogonza/ai110-module1show-gameglitchinvestigator"
   },
+  {
+    title: "MovieRecs",
+    description: "mood-based movie recommendation web app. You pick how you are feeling, pick a genre, and get a personalised list of 10 movies to watch.",
+    technologies: ["HTML, CSS, JavaScript, Node, Express, Jest "],
+    liveDemo: "https://movie-app-nu-hazel.vercel.app/",
+    github: "https://github.com/gelogonza/movie-app"
+  }
   ]
 
   const goToPrevious = () => {
