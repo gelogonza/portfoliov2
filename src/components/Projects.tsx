@@ -85,9 +85,9 @@ const Projects = () => {
     {
       title: "Syro",
       description: "Designed and developed a Music app using Spotify API that allows users to access playlists, view data, control playback on their devices, play their music from playlists, play music that is downloaded locally.",
-      technologies: ["Python", "Django", "Spotify API, JavaScript, Render"],
-      liveDemo: "https://syroapp-api.onrender.com/",
-      github: "https://github.com/gelogonza/Syro"
+      technologies: ["Typescript", "Next.js", "Spotify API", "Tailwind", "Figma"],
+      liveDemo: "https://syro-app.vercel.app/",
+      github: "https://github.com/gelogonza/SyroApp"
     
     },
     {
