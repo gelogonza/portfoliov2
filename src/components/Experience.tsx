@@ -200,7 +200,7 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold gradient-heading mb-8">Licenses & Certifications</h3>
               <div className="grid gap-6">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
+                  <div key={index} className="bg-white border border-white/20 rounded-lg p-6 hover:border-orange-300 transition-all duration-300 shadow-lg">
                     <div className="flex flex-col md:flex-row gap-6">
                       {/* Badge Icon - Consistent styling */}
                       <div className="flex-shrink-0">
@@ -223,17 +223,17 @@ site traffic, SEO, and lead quality`,
                       <div className="flex-1">
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                           <div>
-                            <h4 className="text-xl font-semibold text-white mb-1">{cert.title}</h4>
-                            <p className="text-white font-medium mb-1">{cert.issuer}</p>
-                            <p className="text-white text-sm">Issued {cert.issuedDate}</p>
+                            <h4 className="text-xl font-semibold text-orange-500 mb-1">{cert.title}</h4>
+                            <p className="text-orange-400 font-medium mb-1">{cert.issuer}</p>
+                            <p className="text-orange-400 text-sm">Issued {cert.issuedDate}</p>
                             {cert.credentialId && (
-                              <p className="text-white text-sm">Credential ID {cert.credentialId}</p>
+                              <p className="text-orange-400 text-sm">Credential ID {cert.credentialId}</p>
                             )}
                           </div>
                         </div>
 
                         {cert.description && (
-                          <p className="text-white leading-relaxed mb-4">{cert.description}</p>
+                          <p className="text-orange-400 leading-relaxed mb-4">{cert.description}</p>
                         )}
 
                         {cert.skills && (
@@ -241,7 +241,7 @@ site traffic, SEO, and lead quality`,
                             {cert.skills.map((skill, skillIndex) => (
                               <span
                                 key={skillIndex}
-                                className="px-3 py-1 text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
+                                className="px-3 py-1 text-sm text-white bg-orange-500 rounded-full"
                               >
                                 {skill}
                               </span>
@@ -260,15 +260,15 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold gradient-heading mb-8">Professional & Leadership</h3>
               <div className="grid gap-6">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
+                  <div key={index} className="bg-white border border-white/20 rounded-lg p-6 hover:border-orange-300 transition-all duration-300 shadow-lg">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
-                        <p className="text-white font-medium">{exp.company}</p>
+                        <h4 className="text-xl font-semibold text-orange-500">{exp.title}</h4>
+                        <p className="text-orange-400 font-medium">{exp.company}</p>
                       </div>
-                      <span className="text-white mt-2 md:mt-0">{exp.period}</span>
+                      <span className="text-orange-400 mt-2 md:mt-0">{exp.period}</span>
                     </div>
-                    <p className="text-white leading-relaxed whitespace-pre-line">{exp.description}</p>
+                    <p className="text-orange-400 leading-relaxed whitespace-pre-line">{exp.description}</p>
                   </div>
                 ))}
               </div>
@@ -279,21 +279,21 @@ site traffic, SEO, and lead quality`,
               <h3 className="text-2xl font-semibold gradient-heading mb-8">Academic Coursework</h3>
               <div className="grid gap-6">
                 {courses.map((course, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-white/30 transition-all duration-300">
+                  <div key={index} className="bg-white border border-white/20 rounded-lg p-6 hover:border-orange-300 transition-all duration-300 shadow-lg">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h4 className="text-xl font-semibold text-white">{course.title}</h4>
-                        <p className="text-white font-medium">{course.institution}</p>
+                        <h4 className="text-xl font-semibold text-orange-500">{course.title}</h4>
+                        <p className="text-orange-400 font-medium">{course.institution}</p>
                       </div>
-                      <span className="text-white mt-2 md:mt-0">{course.period}</span>
+                      <span className="text-orange-400 mt-2 md:mt-0">{course.period}</span>
                     </div>
-                    <p className="text-white leading-relaxed mb-4">{course.description}</p>
+                    <p className="text-orange-400 leading-relaxed mb-4">{course.description}</p>
                     {Array.isArray(course.technologies) && course.technologies.length > 0 ? (
                       <div className="flex flex-wrap gap-2">
                         {course.technologies.map((tech: string, techIndex: number) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
+                            className="px-3 py-1 text-sm text-white bg-orange-500 rounded-full"
                           >
                             {tech}
                           </span>

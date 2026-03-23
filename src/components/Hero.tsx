@@ -71,8 +71,9 @@ const Hero = () => {
           <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold gradient-heading pb-4">
             Angelo Gonzalez
           </h1>
+          <p className='hero-text text-2xl md:text-x1 text-white'>Informatics @ IU</p>
           <p className="hero-text text-xl md:text-2xl text-white">
-            Software Engineer | Web Developer | Creative
+          Software Engineer | Web Developer 
           </p>
           
           {/* Social Links */}

@@ -1,15 +1,11 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   useGSAP(() => {
-    // Simple fade-in animations on mount
     gsap.from('.projects-header', {
       y: 50,
       opacity: 0,
@@ -18,12 +14,12 @@ const Projects = () => {
       delay: 0.2
     })
 
-    // Animate carousel
-    gsap.from('.carousel-container', {
+    gsap.from('.project-card', {
       y: 30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.6,
       ease: 'power3.out',
+      stagger: 0.1,
       delay: 0.5
     })
   }, { scope: containerRef })
@@ -36,24 +32,6 @@ const Projects = () => {
     github?: string
     figmaEmbed?: string
   }[] = [
-    {
-      title: "Figma Design",
-      description: "UI/UX design prototype created in Figma.",
-      technologies: ["Figma", "UI/UX"],
-      figmaEmbed: "https://embed.figma.com/design/3BHfZx6b7uaCaX3OKfZGKG/Untitled?node-id=0-1&embed-host=share"
-    },
-    {
-      title: "Figma Design 2",
-      description: "UI/UX design prototype created in Figma.",
-      technologies: ["Figma", "UI/UX"],
-      figmaEmbed: "https://embed.figma.com/design/DgrxhONhSXy5xPJm2lRgAv/Untitled?node-id=0-1&embed-host=share"
-    },
-    {
-      title: "AI ChatBot",
-      description: "AI ChatBot UI/UX design prototype created in Figma.",
-      technologies: ["Figma", "UI/UX", "AI"],
-      figmaEmbed: "https://embed.figma.com/design/F59nFjugImdPKOe2Ktv27j/AI-ChatBot?node-id=0-1&embed-host=share"
-    },
     {
       title: "Portfolio V2",
       description: "Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, glass-morphism effects, and a professional dark theme design.",
@@ -88,7 +66,6 @@ const Projects = () => {
       technologies: ["Typescript", "Next.js", "Spotify API", "Tailwind", "Figma"],
       liveDemo: "https://syro-app.vercel.app/",
       github: "https://github.com/gelogonza/SyroApp"
-    
     },
     {
       title: "Reservation System",
@@ -107,21 +84,18 @@ const Projects = () => {
       description: "Simple Wordle Clone, done for a class.",
       technologies: ["Swift", "XCode", "SwiftUI"],
       github: "https://github.com/angelo-gonza/Wordle"
-    }
-    ,
+    },
     {
       title: "Breakfast Ordering App",
       description: "Breakfast ordering website. Allows for adding customers, new items to the order, phone number, email, name, and the ability to update. Also gets orders added to database. Implemented templating for several pages to have a coherent and sleek layout across all pages.",
       technologies: ["Python, HTML/CSS, SQL, Bootstrap, Flask, Jinja, SSH, Shell"],
       github: "https://github.iu.edu/i211fa2025/ag38-final-app"
-
     },
     {
       title: "Recipe App",
-      description: "Recipe site that has a list of recipes, you can add, delete, and edit the recipes. Upon clicking on the recipes you will get taken to the page for that recipe where it will have a picture of the recipe, a description, reviews for the recipe, and a link that leads you to the official recipe page. In this app we use sql to have the recipes added to a database, Python for the implementation of the code to get this to work, Flask for the help on having this on the web, HTML/CSS and Bootstrap for the design, Jinja for the templating, and A lot of shell was used in the creation for this as well." ,
+      description: "Recipe site that has a list of recipes, you can add, delete, and edit the recipes. Upon clicking on the recipes you will get taken to the page for that recipe where it will have a picture of the recipe, a description, reviews for the recipe, and a link that leads you to the official recipe page. In this app we use sql to have the recipes added to a database, Python for the implementation of the code to get this to work, Flask for the help on having this on the web, HTML/CSS and Bootstrap for the design, Jinja for the templating, and A lot of shell was used in the creation for this as well.",
       technologies: ["Python, SQL, HTML/CSS, Bootstrap, SQL, Jinja, Linux"],
-      github:"https://github.iu.edu/i211fa2025/ag38-recipe-app"
-
+      github: "https://github.iu.edu/i211fa2025/ag38-recipe-app"
     },
     {
       title: "Recipe Page",
@@ -129,49 +103,22 @@ const Projects = () => {
       technologies: ["HTML, CSS"],
       liveDemo: "https://gelogonza.github.io/recipe-website/",
       github: "https://github.com/gelogonza/recipe-website"
-  },
-  {
-    title: "Game Glitch Investigator",
-    description: "A number guessing game where the player tries to guess a randomly chosen secret number within a set number of attempts. Each wrong guess provides a hint (go higher or lower), and the score is based on how few attempts it took to win.",
-    technologies: ["Python, Claude"],
-    liveDemo: "https://ai110gameglitchinvestigator.streamlit.app/",
-    github: "https://github.com/gelogonza/ai110-module1show-gameglitchinvestigator"
-  },
-  {
-    title: "MovieRecs",
-    description: "mood-based movie recommendation web app. You pick how you are feeling, pick a genre, and get a personalised list of 10 movies to watch.",
-    technologies: ["HTML, CSS, JavaScript, Node, Express, Jest "],
-    liveDemo: "https://movie-app-nu-hazel.vercel.app/",
-    github: "https://github.com/gelogonza/movie-app"
-  }
-  ]
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    )
-  }
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    )
-  }
-
-  const getCardStyles = (index: number) => {
-    const position = (index - currentIndex + projects.length) % projects.length
-    const normalizedPosition = position > Math.floor(projects.length / 2) 
-      ? position - projects.length 
-      : position
-    
-    return {
-      rotation: normalizedPosition * 5,
-      zIndex: normalizedPosition === 0 ? 10 : 0,
-      xPosition: normalizedPosition * 15, // vw units
-      scale: index === currentIndex ? 1 : 0.85,
-      opacity: Math.abs(normalizedPosition) > 2 ? 0 : 1
+    },
+    {
+      title: "Game Glitch Investigator",
+      description: "A number guessing game where the player tries to guess a randomly chosen secret number within a set number of attempts. Each wrong guess provides a hint (go higher or lower), and the score is based on how few attempts it took to win.",
+      technologies: ["Python, Claude"],
+      liveDemo: "https://ai110gameglitchinvestigator.streamlit.app/",
+      github: "https://github.com/gelogonza/ai110-module1show-gameglitchinvestigator"
+    },
+    {
+      title: "MovieRecs",
+      description: "mood-based movie recommendation web app. You pick how you are feeling, pick a genre, and get a personalised list of 10 movies to watch.",
+      technologies: ["HTML, CSS, JavaScript, Node, Express, Jest "],
+      liveDemo: "https://movie-app-nu-hazel.vercel.app/",
+      github: "https://github.com/gelogonza/movie-app"
     }
-  }
+  ]
 
   return (
     <section id="projects" className="section" ref={containerRef}>
@@ -182,132 +129,96 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 pb-1 gradient-heading">Projects</h2>
           </div>
 
-          {/* Carousel Container */}
-          <div className="carousel-container flex flex-col items-center justify-center px-4 py-8 md:px-8 md:py-12">
-            {/* Carousel */}
-            <div 
-              className="relative w-full flex items-center justify-center min-h-[420px] md:min-h-[500px] lg:min-h-[580px]"
-              role="region"
-              aria-label="Projects carousel"
-              aria-roledescription="carousel"
-            >
-              {projects.map((project, index) => {
-                const { rotation, zIndex, xPosition, scale, opacity } = getCardStyles(index)
-                
-                return (
-                  <motion.div
-                    key={index}
-                    initial={false}
-                    animate={{
-                      x: `${xPosition}vw`,
-                      rotate: rotation,
-                      zIndex: zIndex,
-                      scale: scale,
-                      opacity: opacity
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                    className="absolute w-80 h-96 md:w-96 md:h-[28rem] lg:w-[28rem] lg:h-[32rem] rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 md:border-4 border-white/20 backdrop-blur-2xl bg-white/10"
-                    role="group"
-                    aria-label={`Slide ${index + 1} of ${projects.length}`}
-                    aria-hidden={index !== currentIndex}
-                  >
-                    {/* Card Content */}
-                    {project.figmaEmbed ? (
-                      <div className="h-full w-full flex flex-col">
-                        {/* Figma Embed — only mounted when this card is active */}
-                        <div className="flex-1 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
-                          {index === currentIndex && (
-                            <iframe
-                              src={project.figmaEmbed}
-                              className="w-full h-full border-0"
-                              allowFullScreen
-                            />
-                          )}
-                        </div>
-                        {/* Info */}
-                        <div className="p-4 md:p-5 flex flex-col gap-2 bg-white/5">
-                          <h3 className="text-lg md:text-xl font-bold text-white">
-                            {project.title}
-                          </h3>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech, techIndex) => (
-                              <span
-                                key={techIndex}
-                                className="px-3 py-1 text-xs text-white bg-white/10 rounded-full border border-white/20"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="project-card rounded-2xl border border-white/20 bg-white shadow-lg overflow-hidden flex flex-col"
+              >
+                {project.figmaEmbed ? (
+                  <div className="flex flex-col h-full">
+                    <div className="aspect-video overflow-hidden">
+                      <iframe
+                        src={project.figmaEmbed}
+                        className="w-full h-full border-0"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-5 flex flex-col gap-2">
+                      <h3 className="text-lg font-bold text-orange-500">
+                        {project.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 text-xs text-white bg-orange-500 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                       </div>
-                    ) : (
-                    <div className="h-full w-full p-6 md:p-8 flex flex-col justify-between">
-                      {/* Header */}
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">
-                          {project.title}
-                        </h3>
-                        <p className="text-sm md:text-base text-white/90 leading-relaxed line-clamp-4 md:line-clamp-5">
-                          {project.description}
-                        </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="p-6 flex flex-col justify-between flex-1">
+                    <div>
+                      <h3 className="text-xl font-bold text-orange-500 mb-3">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-orange-400 leading-relaxed line-clamp-4">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.slice(0, 4).map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 text-xs text-white bg-orange-500 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {project.technologies.length > 4 && (
+                          <span className="px-3 py-1 text-xs text-white bg-orange-500 rounded-full">
+                            +{project.technologies.length - 4}
+                          </span>
+                        )}
                       </div>
 
-                      {/* Technologies */}
-                      <div className="space-y-4">
-                        <div className="flex flex-wrap gap-3">
-                          {project.technologies.slice(0, 4).map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="px-4 py-1.5 text-xs md:text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg"
+                      <div className="flex items-center gap-3">
+                        {project.liveDemo && (
+                          <a
+                            href={project.liveDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 transition-all duration-200 text-white text-sm font-medium"
+                          >
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
                             >
-                              {tech}
-                            </span>
-                          ))}
-                          {project.technologies.length > 4 && (
-                            <span className="px-3 py-1 text-xs md:text-sm text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-lg">
-                              +{project.technologies.length - 4}
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Action Links */}
-                        <div className="flex items-center gap-3">
-                          {project.liveDemo && (
-                            <a
-                              href={project.liveDemo}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 text-white text-sm font-medium"
-                              aria-label="View Live Demo"
-                            >
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                />
-                              </svg>
-                              Demo
-                            </a>
-                          )}
-                          {project.github && (
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                              />
+                            </svg>
+                            Demo
+                          </a>
+                        )}
+                        {project.github && (
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 text-white text-sm font-medium"
-                            aria-label="View Source Code"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 transition-all duration-200 text-white text-sm font-medium"
                           >
                             <svg
                               className="w-4 h-4"
@@ -322,49 +233,13 @@ const Projects = () => {
                             </svg>
                             GitHub
                           </a>
-                          )}
-                        </div>
+                        )}
                       </div>
                     </div>
-                    )}
-                  </motion.div>
-                )
-              })}
-            </div>
-
-            {/* Controls */}
-            <div className="flex gap-2 md:gap-4 mt-8">
-              <button
-                onClick={goToPrevious}
-                aria-label="Previous slide"
-                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-orange-400/50 transition-all duration-200 backdrop-blur-lg"
-              >
-                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" aria-hidden="true" />
-              </button>
-              <button
-                onClick={goToNext}
-                aria-label="Next slide"
-                className="rounded-full h-10 w-10 md:h-12 md:w-12 flex items-center justify-center bg-gray-100/10 border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-orange-400/50 transition-all duration-200 backdrop-blur-lg"
-              >
-                <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" aria-hidden="true" />
-              </button>
-            </div>
-
-            {/* Indicator Dots */}
-            <div className="flex gap-2 mt-6">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'w-8 bg-white' 
-                      : 'w-2 bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -372,4 +247,4 @@ const Projects = () => {
   )
 }
 
-export default Projects 
+export default Projects
