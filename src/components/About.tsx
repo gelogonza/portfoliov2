@@ -61,19 +61,6 @@ const About = () => {
                   I'm always open to new opportunities, collaborations, or simply connecting with others who share the same passion for tech, design, and making things better.
                 </p>
               </div>
-
-              <div className="about-text">
-                <h3 className="text-xl font-semibold gradient-heading mb-4">Beyond Coding</h3>
-                <p className="text-lg text-white leading-relaxed mb-4">
-                  When I'm not coding, I'm running outside, cycling, or in the gym. I also work on creative side projects that spark my curiosity, exploring new places, trying new food, watching movies, or binge watching TV shows. I also scroll on pinterest or archive pages and like to engage with fashion, pop culture, art, and music content.
-                </p>
-                <p className="text-lg text-white leading-relaxed mb-4">
-                  I'm really passionate about fitness. I also love meeting new people and trying new food to experience different cultures.
-                </p>
-                <p className="text-lg text-white leading-relaxed">
-                  I'm someone who values continuous learning beyond just programming and designing. I enjoy reading about entrepreneurship, technology, space, psychology, and design thinking. I'm always curious about how different industries solve complex problems. This broader perspective helps me approach software development with empathy and creativity.
-                </p>
-              </div>
             </div>
           </div>
         </div>
